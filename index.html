@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FurryFriend – Pet Care Services</title>
+
+  <!-- Lightweight Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🐾</div>
+        <div>
+          <div class="name">FurryFriend</div>
+          <div style="font-size:12px;color:var(--muted)">Happy • Healthy • Loved</div>
+        </div>
+      </div>
+
+      <nav class="links" role="navigation" aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#categories">Categories</a>
+        <a href="#services">Services</a>
+        <a href="#book-service">Book</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline" onclick="scrollToSection('#contact')">Contact</button>
+        <button class="btn btn-primary" onclick="scrollToSection('#book-service')">Book a Walk</button>
+        <button class="hambtn" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMobile()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (simple) -->
+  <div id="mobile-menu" style="display:none;padding:12px;background:rgba(255,255,255,0.98);border-bottom:1px solid rgba(16,32,39,0.03)">
+    <div style="display:flex;flex-direction:column;gap:8px;max-width:1180px;margin:0 auto;padding:0 20px">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#categories">Categories</a>
+      <a href="#services">Services</a>
+      <a href="#book-service">Book</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="home" class="hero" aria-label="hero">
+      <div class="hero-card" role="region" aria-labelledby="hero-heading">
+        <div class="badge">✨ Premium Pet Care</div>
+        <h1 id="hero-heading">Keeping your <span class="highlight">Furry Friends</span><br/> Happy, Healthy & Loved</h1>
+        <p>FurryFriend offers trusted dog walking, daycare, grooming and overnight stays – delivered by trained pet carers who treat your pet like family.</p>
+
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="scrollToSection('#book-service')">Schedule a Free Meet & Greet</button>
+          <button class="btn btn-outline" onclick="scrollToSection('#services')">View Services & Pricing</button>
+        </div>
+
+        <div class="stats" aria-hidden="true">
+          <div><strong>1,200+</strong> Happy Pets</div>
+          <div><strong>5+</strong> Years' Experience</div>
+          <div><strong>98%</strong> Repeat Customers</div>
+        </div>
+      </div>
+
+      <div class="hero-visual" style="padding:22px; display:flex; flex-direction:column; justify-content:center; gap:14px;">
+        <div class="pill">24/7 Support</div>
+
+        <h3 style="font-size:18px; font-weight:800; color:var(--text); margin-top:32px;">
+          "FurryFriend is a lifesaver! My dog, Buster, loves his walks, and I get peace of mind with GPS updates"
+        </h3>
+
+        <div style="display:flex; flex-direction:column; gap:6px; font-size:15px; color:var(--text);">
+          <div>✓ Insured & Bonded</div>
+          <div>✓ Background Checked Sitters</div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:12px; margin-top:10px;">
+          <img src="https://i.pravatar.cc/60?img=47" alt="pet parent photo" style="width:46px; height:46px; border-radius:50%;">
+          <div>
+            <div style="font-weight:700;">Sarah K, Happy Pet Parent Since 2022</div>
+            <div style="color:#FFC148; font-size:20px;">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" aria-labelledby="cat-title">
+      <div class="section-title">
+        <h2 id="cat-title">Animals We Care For</h2>
+        <p>From dogs & cats to birds and reptiles – we provide specialised care for many pets.</p>
+      </div>
+
+      <div class="categories-grid" role="list">
+        <div class="card" role="listitem"><div class="icon">🐕</div><h4>Dogs</h4><p>Walks, daycare, boarding & grooming.</p></div>
+        <div class="card" role="listitem"><div class="icon">🐈</div><h4>Cats</h4><p>Home visits, feeding & medication support.</p></div>
+        <div class="card" role="listitem"><div class="icon">🦜</div><h4>Birds</h4><p>Enclosure cleaning, feeding & monitoring.</p></div>
+        <div class="card" role="listitem"><div class="icon">🐇</div><h4>Rabbits</h4><p>Handling, habitat care & grooming.</p></div>
+        <div class="card" role="listitem"><div class="icon">🐹</div><h4>Hamsters</h4><p>Habitat & feeding care.</p></div>
+        <div class="card" role="listitem"><div class="icon">🐢</div><h4>Turtles</h4><p>Water maintenance & temperature checks.</p></div>
+        <div class="card" role="listitem"><div class="icon">🐍</div><h4>Reptiles</h4><p>Heat/UV monitoring & feeding.</p></div>
+        <div class="card" role="listitem"><div class="icon">🐠</div><h4>Fish</h4><p>Tank maintenance & water testing.</p></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="section-title">
+        <h2 id="about-title">About FurryFriend Services</h2>
+        <p>Professional care with a personal touch – trained staff, safety-first practices, and lots of love.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="card about-card">
+          <h3>We Care Like Family 🐶🐱</h3>
+          <p>Based locally, our team focuses on safety, play, and routines tailored to each pet. We keep owners updated with photos and notes.</p>
+          <div style="display:flex;gap:18px;margin-top:12px">
+            <div>
+              <strong style="display:block">1200+</strong>
+              <small class="muted">Completed Walks</small>
+            </div>
+            <div>
+              <strong style="display:block">300+</strong>
+              <small class="muted">Overnight Stays</small>
+            </div>
+            <div>
+              <strong style="display:block">4.9★</strong>
+              <small class="muted">Avg. Rating</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-gallery" aria-hidden="true">
+          <div style="background-image:url('https://images.prismic.io/trustedhousesitters/dc416c79e94958a605e0128c70d4647b8a502037_96a5eaaf360f8b43423553a314268bb9.jpg?auto=compress,format');"></div>
+          <div style="background-image:url('https://img.freepik.com/premium-photo/two-cats-snuggling-together-two-adorable-kittens-sleeping-together-close-up-generative-ai_87561-11523.jpg?w=2000');"></div>
+          <div style="background-image:url('https://thumbs.dreamstime.com/z/love-birds-cage-bird-has-beautiful-chirp-love-birds-cage-bird-has-beautiful-chirp-264134953.jpg');"></div>
+          <div style="background-image:url('https://www.shutterstock.com/image-photo/goldfish-fishbowl-600nw-716133220.jpg');"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" aria-labelledby="services-title">
+      <div class="section-title">
+        <h2 id="services-title">Our Pet Care Services</h2>
+        <p>Flexible plans for walks, daycare, grooming, training and boarding.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-image" style="background-image:url('https://img.freepik.com/free-vector/happy-cartoon-woman-walking-two-cute-dogs-park-young-owner-walk-with-domestic-animals-flat-vector-illustration-pets-healthy-lifestyle-concept-banner-website-design-landing-web-page_74855-24233.jpg')"></div>
+          <div class="service-body">
+            <span class="badge-pill">Most Popular</span>
+            <h3>Dog Walking</h3>
+            <p>Energizing 30–45 minute walks with GPS tracking, play time, and fresh water.</p>
+            <div style="margin-top:auto;font-weight:800;color:var(--primary);">From ₹350 / walk</div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-image" style="background-image:url('https://static.vecteezy.com/system/resources/previews/035/691/133/large_2x/pets-care-illustration-with-animal-shelter-or-vet-clinic-for-taking-care-of-dog-or-cat-in-healthcare-flat-cartoon-background-design-vector.jpg')"></div>
+          <div class="service-body">
+            <span class="badge-pill" style="background:var(--accent);color:var(--text)">Daycare</span>
+            <h3>Pet Daycare</h3>
+            <p>Supervised play and naps in a comfy environment with staff oversight.</p>
+            <div style="margin-top:auto;font-weight:800;color:var(--primary);">From ₹900 / day</div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-image" style="background-image:url('https://freevector-images.s3.amazonaws.com/uploads/vector/preview/132838/vecteezypet-groomer-illustrationRP0522_generated.jpg')"></div>
+          <div class="service-body">
+            <span class="badge-pill" style="background:#FFB6C1;color:white">Groom & Spa</span>
+            <h3>Grooming & Spa</h3>
+            <p>Baths, trims, nail care and styling to keep your pet camera-ready.</p>
+            <div style="margin-top:auto;font-weight:800;color:var(--primary);">From ₹700 / session</div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-image" style="background-image:url('https://img.freepik.com/free-vector/pet-hotel-cartoon-background-with-owner-cat-leaving-his-pet-care-hotel-employee-flat-vector-illustration_1284-79725.jpg')"></div>
+          <div class="service-body">
+            <span class="badge-pill" style="background:#FFE4B5;color:var(--text)">Boarding</span>
+            <h3>Overnight Boarding</h3>
+            <p>Home-style boarding with comfy beds, bedtime routines and supervision.</p>
+            <div style="margin-top:auto;font-weight:800;color:var(--primary);">From ₹1500 / night</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Booking Section (Centered) -->
+    <section id="book-service" aria-labelledby="book-title">
+      <div class="section-title">
+        <h2 id="book-title">Book a Service</h2>
+        <p>Select your pet and services. Download booking as .txt</p>
+      </div>
+
+      <div class="booking-centered">
+        <form id="booking-form" style="margin-top:12px">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+
+          <div class="form-group">
+            <label for="pet">Pet Category</label>
+            <select id="pet" name="pet" required>
+              <option value="">Choose</option>
+              <option>Dog</option><option>Cat</option><option>Bird</option><option>Rabbit</option><option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Select Services</label>
+            <div class="service-checkboxes">
+              <div class="service-checkbox-item">
+                <label>
+                  <input type="checkbox" name="services" value="Dog Walking" data-price="350">
+                  <span class="service-label">
+                    <strong>Dog Walking</strong>
+                    <span class="service-rate">₹350 / walk</span>
+                  </span>
+                </label>
+                <input type="number" class="service-qty" min="1" value="1" placeholder="Qty">
+              </div>
+
+              <div class="service-checkbox-item">
+                <label>
+                  <input type="checkbox" name="services" value="Pet Daycare" data-price="900">
+                  <span class="service-label">
+                    <strong>Pet Daycare</strong>
+                    <span class="service-rate">₹900 / day</span>
+                  </span>
+                </label>
+                <input type="number" class="service-qty" min="1" value="1" placeholder="Qty">
+              </div>
+
+              <div class="service-checkbox-item">
+                <label>
+                  <input type="checkbox" name="services" value="Grooming & Spa" data-price="700">
+                  <span class="service-label">
+                    <strong>Grooming & Spa</strong>
+                    <span class="service-rate">₹700 / session</span>
+                  </span>
+                </label>
+                <input type="number" class="service-qty" min="1" value="1" placeholder="Qty">
+              </div>
+
+              <div class="service-checkbox-item">
+                <label>
+                  <input type="checkbox" name="services" value="Overnight Boarding" data-price="1500">
+                  <span class="service-label">
+                    <strong>Overnight Boarding</strong>
+                    <span class="service-rate">₹1500 / night</span>
+                  </span>
+                </label>
+                <input type="number" class="service-qty" min="1" value="1" placeholder="Qty">
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-total" id="bookingTotal">
+            <span>Total Cost:</span>
+            <span class="booking-total-amount">₹0</span>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input id="date" name="date" type="date" value="">
+            </div>
+            <div class="form-group">
+              <label for="time">Time</label>
+              <input id="time" name="time" type="time" value="10:00">
+            </div>
+          </div>
+
+          <div style="margin-top:12px;">
+            <button type="submit" class="btn-book">Download Booking (.txt)</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Customer Feedback -->
+    <section id="feedback" aria-labelledby="feedback-title">
+      <div class="section-title">
+        <h2 id="feedback-title">Customer Feedback</h2>
+        <p>Hear from our happy pet parents.</p>
+      </div>
+
+      <div class="two-col">
+        <!-- Leave Review Form -->
+        <div class="booking" aria-labelledby="review-title">
+          <h3 id="review-title">Leave a Review</h3>
+          <p class="muted">Share your experience with FurryFriend.</p>
+
+          <form id="feedback-form" style="margin-top:12px">
+            <div class="form-group">
+              <label for="review-name">Your Name</label>
+              <input id="review-name" name="review-name" type="text" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="review-email">Email</label>
+              <input id="review-email" name="review-email" type="email" required>
+            </div>
+
+            <div class="form-group">
+              <label>Rating</label>
+              <div class="star-rating" role="radiogroup" aria-label="Rating">
+                <input type="radio" name="rating" value="5" id="star5" required>
+                <label for="star5" class="star">★</label>
+                <input type="radio" name="rating" value="4" id="star4">
+                <label for="star4" class="star">★</label>
+                <input type="radio" name="rating" value="3" id="star3">
+                <label for="star3" class="star">★</label>
+                <input type="radio" name="rating" value="2" id="star2">
+                <label for="star2" class="star">★</label>
+                <input type="radio" name="rating" value="1" id="star1">
+                <label for="star1" class="star">★</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="review-text">Your Review</label>
+              <textarea id="review-text" name="review-text" required placeholder="Tell us about your experience..." rows="4" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(16,32,39,0.06);font-size:15px;background:var(--bg);font-family:inherit;resize:vertical"></textarea>
+            </div>
+
+            <div style="margin-top:12px;">
+              <button type="submit" class="btn-book">Submit Review</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Recent Reviews Display -->
+        <div class="booking" aria-labelledby="recent-reviews-title">
+          <h3 id="recent-reviews-title">Recent Reviews</h3>
+          <p class="muted">What our customers are saying.</p>
+
+          <div id="reviews-display" style="margin-top:18px;display:flex;flex-direction:column;gap:14px">
+            <div class="review-card">
+              <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+                <strong>Ananya R.</strong>
+                <div style="color:#FFC148;font-size:16px">★★★★★</div>
+              </div>
+              <p class="muted" style="font-size:14px">Reliable and friendly. My dog loves them!</p>
+            </div>
+
+            <div class="review-card">
+              <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+                <strong>Rajesh M.</strong>
+                <div style="color:#FFC148;font-size:16px">★★★★★</div>
+              </div>
+              <p class="muted" style="font-size:14px">Best pet care in Bengaluru!</p>
+            </div>
+
+            <div class="review-card">
+              <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
+                <strong>Priya S.</strong>
+                <div style="color:#FFC148;font-size:16px">★★★★★</div>
+              </div>
+              <p class="muted" style="font-size:14px">Exceptional service! My cat is always happy after their visits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="section-title">
+        <h2 id="contact-title">Get In Touch</h2>
+        <p>For questions or detailed quotes, reach out to us.</p>
+      </div>
+
+      <div class="contact-box">
+        <h4>Contact Information</h4>
+        <p class="contact-info">We're based in Bengaluru and serve nearby neighbourhoods for walks, daycare and boarding.</p>
+
+        <div style="margin-top:12px">
+          <div class="ci-block"><strong>Address</strong><div class="muted">FurryFriend Pet Care Studio, 21 Pawprint Lane, Bengaluru, Karnataka 560001</div></div>
+          <div class="ci-block" style="margin-top:8px"><strong>Phone</strong><div class="muted">+91 123-456-7890</div></div>
+          <div class="ci-block" style="margin-top:8px"><strong>Email</strong><div class="muted">hello@furryfriendservices.com</div></div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:8px">
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--card);display:grid;place-items:center">f</div>
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--card);display:grid;place-items:center">📷</div>
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--card);display:grid;place-items:center">🦜</div>
+          <div style="width:38px;height:38px;border-radius:10px;background:var(--card);display:grid;place-items:center">in</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <small>© 2025 FurryFriend Services. All rights reserved.</small>
+      <small>Designed with 🐾 for pet parents.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
